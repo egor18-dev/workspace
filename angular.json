@@ -73,6 +73,7 @@
               }
             ],
             "styles": [
+              
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
               },
