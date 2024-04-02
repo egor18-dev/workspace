@@ -1,0 +1,76 @@
+<div class="contaier-fluid" style="min-height: 85vh">
+  <div class="row p-5">
+    <div class="col-md-6">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" *ngIf="pet">
+            <div class="carousel-item active" *ngFor="let petImg of pet.carousel_imgs">
+              <img src="{{petImg}}" class="d-block w-100" alt="..." height="400" style="object-fit: cover;"/>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+     <h5 class="text-center mt-5" *ngIf="pet">{{pet.name}}</h5>
+
+    </div>
+    <div class="col-md-6" *ngIf="pet">
+      <h2>Història</h2>
+      <p>
+        {{ pet.biography }}
+      </p>
+      <h2>Dades</h2>
+      <ul>
+        <li>Sexe: {{ pet.type == "dog" ? "gos" : "gat" }}</li>
+        <li>Data naixament : {{ pet.birthdate }}</li>
+        <li>Xip : {{ pet.chip == "yes" ? "si" : "no" }}</li>
+        <li>Vacunes : {{ pet.vaccines }}</li>
+        <li>Malalties : {{ pet.diseases }}</li>
+        <li>Observacions : {{ pet.observations }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

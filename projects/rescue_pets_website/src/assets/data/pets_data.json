@@ -1,0 +1,166 @@
+{
+  "pets": [
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Toby",
+      "type": "dog",
+      "main_image": "dog1.jpg",
+      "carousel_imgs": ["dog1.jpg", "dog1.jpg", "dog1.jpg"],
+      "biography": [
+        "Toby fue encontrado abandonado a la vera de la carretera.",
+        "Fue rescatado y llevado a la protectora.",
+        "Es un perro muy amigable y juguetón."
+      ],
+      "sex": "male",
+      "birthdate": "2019-05-15",
+      "age": 4,
+      "chip": "yes",
+      "vaccines": ["rabies", "distemper"],
+      "diseases": [],
+      "observations": ["Toby se lleva bien con otros animales y niños."]
+    },
+    {
+      "name": "Whiskers",
+      "type": "cat",
+      "main_image": "cat1.jpg",
+      "carousel_imgs": ["cat1.jpg", "cat1.jpg", "cat1.jpg"],
+      "biography": [
+        "Whiskers fue abandonado en una caja en las puertas de la protectora.",
+        "Parece ser un gato doméstico.",
+        "Es muy juguetona y le gusta estar cerca de las personas."
+      ],
+      "sex": "female",
+      "birthdate": "2020-02-10",
+      "age": 3,
+      "chip": "no",
+      "vaccines": ["rabies"],
+      "diseases": ["cold"],
+      "observations": ["Whiskers es muy cariñosa y le gusta jugar."]
+    }
+  ]
+}
