@@ -6,9 +6,9 @@
                     <img src="{{pet.main_image}}" class="w-100" alt="img{{pet.name}}" routerLink="/animal/{{pet.id}}" height="150" style="object-fit: cover;">
                     <h5 class="text-center mt-2">{{pet.name}}</h5>
                     <div class="row" *ngIf="isUserLogged">
-                        <button class="btn btn-outline-success" routerLink="/timetable/{{pet.id}}">Cuidar</button>
-                        <button class="btn btn-outline-danger my-2" (click)="delete(i, pet.id!)" *ngIf="isAdmin">Eliminar</button>
-                        <button class="btn btn-outline-primary" routerLink="/modifyPet/{{pet.id}}" *ngIf="isAdmin">Editar</button>
+                        <ion-button color="primary" class="btn btn-outline-success" routerLink="/timetable/{{pet.id}}">Cuidar</ion-button>
+                        <ion-button color="primary" class="btn btn-outline-danger my-2" (click)="delete(i, pet.id!)" *ngIf="isAdmin">Eliminar</ion-button>
+                        <ion-button color="primary" class="btn btn-outline-primary" routerLink="/modifyPet/{{pet.id}}" *ngIf="isAdmin">Editar</ion-button>
                     </div>
                 </div>
             </ion-col>

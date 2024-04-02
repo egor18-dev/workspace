@@ -3,3 +3,7 @@ img{
     height: 50%;
     object-fit: cover;
 }
+
+ion-grid{
+    min-height: 100vh;
+}

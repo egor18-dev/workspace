@@ -20,7 +20,11 @@ export class LoginComponent {
   }
 
   signIn(data : any) {
-    this._authSessionService.login(data.email, data.password);
+    this._authSessionService.login(data.email, data.password).then((res) => {
+      console.log(`${res}`);
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
   signInGoogle () {
