@@ -1,0 +1,21 @@
+<div class="container-fluid p-5">
+  <button class="btn btn-primary" (click)="reload(0)">Avui</button>
+  <button class="btn btn-primary" (click)="reload(1)">Dema</button>
+  <button class="btn btn-primary" (click)="reload(2)">Dema passat</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Hores</th>
+            <th scope="col">Cuidador</th>
+            <th scope="col">Estat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hour of hours; index as i">
+            <th scope="row">{{hour.toFixed(2)}}h</th>
+            <td><span>{{getName(retrieveByHour(i))}}</span></td>
+            <td><button class="btn btn-dark" (click)="volunteerAdd(i)" [disabled]="retrieveByHour(i).length > 0 && retrieveByHour(i)[0].refPet == id">Reservar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

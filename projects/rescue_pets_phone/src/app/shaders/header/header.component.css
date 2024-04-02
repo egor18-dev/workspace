@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #18191A;
+
+    .left{
+        display: flex;
+        align-items: center;
+    }
+
+    .list ul{
+
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        flex-wrap: wrap;
+
+        a{
+            margin: 0 10px;
+        }
+    }
+}
+
+header *{
+    color: #fff;
+    text-decoration: none;
+}

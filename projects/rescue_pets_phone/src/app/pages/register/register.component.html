@@ -1,0 +1,31 @@
+<ion-grid>
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="10">
+            <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)">
+                <h1>Crea el teu compte</h1>
+                <div class="form-group mb-3">
+                    <label for="name">Nom : </label>
+                    <input formControlName="name" type="text" id="name" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="surnames">Cognoms : </label>
+                    <input formControlName="surnames" type="text" id="surnames" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email : </label>
+                    <input formControlName="email" type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password">Contrasenya : </label>
+                    <input formControlName="password" type="password" id="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mb-2 w-100" value="Crear compte">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-outline-dark w-100" value="Iniciar sesió" [routerLink]="['/signIn']">
+                </div>
+            </form>
+        </ion-col>
+    </ion-row>
+</ion-grid>

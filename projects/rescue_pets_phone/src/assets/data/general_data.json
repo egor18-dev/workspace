@@ -1,0 +1,18 @@
+{
+  "nom_empresa": "Amor Animal",
+  "institucio": "Centro de Bienestar Animal",
+  "historia": "Había una vez un pequeño pueblo donde los animales no tenían un lugar seguro. Muchos de ellos estaban abandonados, hambrientos y desamparados. En medio de esta triste realidad, un grupo de personas apasionadas por los animales decidió unir sus fuerzas para hacer algo al respecto. Este grupo fundó Corazón Peludo, una institución dedicada al rescate, cuidado y protección de animales en situación de abandono. El nombre reflejaba la compasión y el amor que sentían por cada ser peludo que cruzaba su camino. Los fundadores de Corazón Peludo establecieron un refugio acogedor y crearon programas de adopción para encontrar hogares amorosos para los animales rescatados. Organizaron eventos comunitarios para concientizar sobre la importancia del bienestar animal y recaudar fondos para mejorar las instalaciones y expandir sus operaciones",
+  "direccio": {
+    "carrer": "Calle de la Rosa",
+    "numero": "789",
+    "ciutat": "Ciudad del Sol",
+    "estat": "Provincia Imaginaria",
+    "cp": "54321",
+    "pais": "Fictilanda"
+  },
+  "contacte": {
+    "nom": "María García",
+    "telefon": "+987654321",
+    "correu": "maria.garcia@example.com"
+  }
+}

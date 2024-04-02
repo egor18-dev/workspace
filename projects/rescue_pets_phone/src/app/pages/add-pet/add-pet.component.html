@@ -1,0 +1,55 @@
+<div class="container-fluid p-5">
+    <h1>{{!modify ? "Afegeix" : "Modifica"}} animals</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="addPet(formGroup.value)">
+        <div class="form-group mb-3">
+            <input type="text" formControlName="name" placeholder="Introdueix el nom" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="type">Tipus</label>
+            <select class="form-select" id="type" formControlName="type">
+                <option value="dog">Gos</option>
+                <option value="cat">Gat</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="main-file">Foto principal</label>
+            <input type="file" (change)="readMainFile($event)" accept="image/*" id="main-file" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="files">Fotos carousel</label>
+            <input type="file" (change)="readCarouselFiles($event)"  multiple="multiple" accept="image/*" id="files" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" formControlName="biography" placeholder="Biografia" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <select class="form-select" formControlName="sex">
+                <option selected>Sexe</option>
+                <option value="male">Mascle</option>
+                <option value="female">Femella</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <input type="date" formControlName="birthdate" placeholder="Data de naixament" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="Chip">Chip</label>
+            <select class="form-select" id="chip" formControlName="chip">
+                <option value="yes">Si</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="vaccines" placeholder="Vacunes separat per comes">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="diseases" placeholder="Malalties separat per comes">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="observations" placeholder="Observacions separat per comes">
+        </div>
+        <div class="form-group">
+            <input type="submit" [disabled]="!formGroup.valid" class="btn btn-outline-dark" value="{{modify ? 'Modificar' : 'Afegir'}}">
+        </div>
+    </form>
+</div>

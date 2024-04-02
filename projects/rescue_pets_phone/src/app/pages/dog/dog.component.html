@@ -1,0 +1,17 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3" *ngFor="let pet of getPets(); index as i"> 
+                <div class="col-md-4 d-flex flex-column align-items-center justify-content-center" *ngIf="pet.type == 'dog'">
+                    <img src="{{pet.main_image}}" class="w-100" alt="img{{pet.name}}" routerLink="/animal/{{pet.id}}" height="150" style="object-fit: cover;">
+                    <h5 class="text-center mt-2">{{pet.name}}</h5>
+                    <div class="row" *ngIf="isUserLogged">
+                        <button class="btn btn-outline-success" routerLink="/timetable/{{pet.id}}">Cuidar</button>
+                        <button class="btn btn-outline-danger my-2" (click)="delete(i, pet.id!)" *ngIf="isAdmin">Eliminar</button>
+                        <button class="btn btn-outline-primary" routerLink="/modifyPet/{{pet.id}}" *ngIf="isAdmin">Editar</button>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
