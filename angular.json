@@ -270,7 +270,7 @@
               "projects/rescue_pets_website/src/assets"
             ],
             "styles": [
-              "projects/rescue_pets_website/src/styles.scss"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
