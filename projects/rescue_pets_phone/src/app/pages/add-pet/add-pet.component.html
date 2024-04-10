@@ -1,67 +1,69 @@
-<ion-grid>
-    <ion-row class="ion-justify-content-center">
-        <ion-col size="10">
-            <div style="padding: 20px;">
-                <h1>{{!modify ? "Afegeix" : "Modifica"}} animals</h1>
-                <form [formGroup]="formGroup" (ngSubmit)="addPet(formGroup.value)">
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Nom: <ion-text color="danger">(Required)</ion-text></ion-label>
-                        <ion-input formControlName="name"></ion-input>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Tipus</ion-label>
-                        <ion-select formControlName="type" placeholder="Selecciona un tipus">
-                            <ion-select-option value="dog">Gos</ion-select-option>
-                            <ion-select-option value="cat">Gat</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Foto principal</ion-label>
-                        <input type="file" (change)="readMainFile($event)" accept="image/*" id="main-file">
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Fotos carousel</ion-label>
-                        <input type="file" (change)="readCarouselFiles($event)" multiple="multiple" accept="image/*" id="files">
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Biografia</ion-label>
-                        <ion-input formControlName="biography"></ion-input>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Sexe</ion-label>
-                        <ion-select formControlName="sex" placeholder="Selecciona el sexe">
-                            <ion-select-option value="male">Mascle</ion-select-option>
-                            <ion-select-option value="female">Femella</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Data de naixament</ion-label>
-                        <ion-input type="date" formControlName="birthdate"></ion-input>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Chip</ion-label>
-                        <ion-select formControlName="chip" placeholder="Té xip?">
-                            <ion-select-option value="yes">Si</ion-select-option>
-                            <ion-select-option value="no">No</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Vacunes separat per comes</ion-label>
-                        <ion-input formControlName="vaccines"></ion-input>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Malalties separat per comes</ion-label>
-                        <ion-input formControlName="diseases"></ion-input>
-                    </ion-item>
-                    <ion-item style="margin-bottom: 20px;">
-                        <ion-label position="floating">Observacions separat per comes</ion-label>
-                        <ion-input formControlName="observations"></ion-input>
-                    </ion-item>
-                    <div>
-                        <ion-button type="submit" [disabled]="!formGroup.valid">{{modify ? 'Modificar' : 'Afegir'}}</ion-button>
-                    </div>
-                </form>
-            </div>
-        </ion-col>
-    </ion-row>
-</ion-grid>
+<ion-content>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="10">
+                <div style="padding: 20px;">
+                    <h1>{{!modify ? "Afegeix" : "Modifica"}} animals</h1>
+                    <form [formGroup]="formGroup" (ngSubmit)="addPet(formGroup.value)">
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Nom: <ion-text color="danger">(Required)</ion-text></ion-label>
+                            <ion-input formControlName="name"></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Tipus</ion-label>
+                            <ion-select formControlName="type" placeholder="Selecciona un tipus">
+                                <ion-select-option value="dog">Gos</ion-select-option>
+                                <ion-select-option value="cat">Gat</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Foto principal</ion-label>
+                            <input type="file" (change)="readMainFile($event)" accept="image/*" id="main-file">
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Fotos carousel</ion-label>
+                            <input type="file" (change)="readCarouselFiles($event)" multiple="multiple" accept="image/*" id="files">
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Biografia</ion-label>
+                            <ion-input formControlName="biography"></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Sexe</ion-label>
+                            <ion-select formControlName="sex" placeholder="Selecciona el sexe">
+                                <ion-select-option value="male">Mascle</ion-select-option>
+                                <ion-select-option value="female">Femella</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Data de naixament</ion-label>
+                            <ion-input type="date" formControlName="birthdate"></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Chip</ion-label>
+                            <ion-select formControlName="chip" placeholder="Té xip?">
+                                <ion-select-option value="yes">Si</ion-select-option>
+                                <ion-select-option value="no">No</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Vacunes separat per comes</ion-label>
+                            <ion-input formControlName="vaccines"></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Malalties separat per comes</ion-label>
+                            <ion-input formControlName="diseases"></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label position="floating">Observacions separat per comes</ion-label>
+                            <ion-input formControlName="observations"></ion-input>
+                        </ion-item>
+                        <div>
+                            <ion-button type="submit" [disabled]="!formGroup.valid">{{modify ? 'Modificar' : 'Afegir'}}</ion-button>
+                        </div>
+                    </form>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
