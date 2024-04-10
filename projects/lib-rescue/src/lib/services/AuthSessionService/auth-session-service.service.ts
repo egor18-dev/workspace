@@ -106,17 +106,8 @@ export class AuthSessionService {
       );
 
       if (result) {
-        if(this._auth.currentUser?.emailVerified){
           this.checkUserAdmin();
-        }else{
-          sendEmailVerification(result.user);
-          this._auth.signOut().then(() => {
-            alert("Usuari no verificat, hem tornat a enviar un gmail de verificacio");
-            this._router.navigate(['/signIn']);
-          });
-        }
-        
-        this._router.navigate(['/home']);
+          this._router.navigate(['/home']);
       } else {
         this._router.navigate(['/signIn']);
       }
