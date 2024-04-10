@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <div class="left">
     <img src="/assets/img/logo.png" width="50" height="50">
     <a class="navbar-brand" href="#">Protectora de animals</a>
@@ -9,12 +9,44 @@
   </button>
   <div class="collapse navbar-collapse list" id="navbarNav">
     <ul class="navbar-nav ms-auto">
-        <a class="nav-link" routerLink="/home">Inici</a>
-        <a class="nav-link" routerLink="/cats">Gats</a>
-        <a class="nav-link" routerLink="/dogs">Gossos</a>
-        <a class="nav-link" routerLink="/addPet" *ngIf="checkUserIsAdmin()">Afegir animal</a>
-        <a class="nav-link" routerLink="/signIn" *ngIf="!isUserLogged">Autenticar</a>
-        <a class="nav-link" routerLink="dogs" (click)="logOut()" *ngIf="isUserLogged">Tancar sessió</a>
+        
     </ul>
   </div>
-</header>
+</header> -->
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Menu navegació</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item><a class="nav-link" routerLink="/home">Inici</a></ion-item>
+      <ion-item><a class="nav-link" routerLink="/cats">Gats</a></ion-item>
+      <ion-item><a class="nav-link" routerLink="/dogs">Gossos</a></ion-item>
+      <ion-item *ngIf="checkUserIsAdmin()"><a class="nav-link" routerLink="/addPet">Afegir animal</a></ion-item>
+      <ion-item *ngIf="!isUserLogged"><a class="nav-link" routerLink="/signIn">Autenticar</a></ion-item>
+      <ion-item *ngIf="isUserLogged"><a class="nav-link" routerLink="dogs" (click)="logOut()">Tancar sessió</a></ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    
+  </ion-content>
+</div>
+
+
+
+
+
+
