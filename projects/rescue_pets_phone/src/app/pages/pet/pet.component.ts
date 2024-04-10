@@ -12,6 +12,8 @@ export class PetComponent implements OnInit{
 
   public pet !: PetModel;
 
+  public actualImg : number = 0;
+
   constructor (private _activatedRoute : ActivatedRoute,
     private _rescueService : RescueService) {}
     
@@ -23,6 +25,19 @@ export class PetComponent implements OnInit{
           this.pet = pet;
         });
       });    
+    }
+
+    getImg()
+    {
+      return this.pet.carousel_imgs[this.actualImg];
+    }
+
+    move(number : number)
+    {
+      this.actualImg += number;
+
+      if(this.actualImg === -1) this.actualImg = 0;
+      if(this.actualImg === this.pet.carousel_imgs.length) this.actualImg = this.pet.carousel_imgs.length - 1;
     }
 
 }

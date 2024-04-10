@@ -1,10 +1,20 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="6">
-        
+      <ion-col size="6" *ngIf="pet">
+        <div class="carousel">
+          <img src="{{getImg()}}" alt="img">
+          <div class="arrows">
+            <div class="elem" (click)="move(-1)">
+              &leftarrow;
+            </div>
+            <div class="elem" (click)="move(1)">
+              &rightarrow;
+            </div>
+          </div>
+        </div>
       </ion-col>
-       <ion-col size="6">
+       <ion-col size="6" *ngIf="pet">
         <h2>Història</h2>
         <p>
           {{ pet.biography }}
