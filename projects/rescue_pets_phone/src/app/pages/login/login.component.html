@@ -4,30 +4,28 @@
             <ion-col size="10">
                 <form [formGroup]="formGroup" (ngSubmit)="signIn(formGroup.value)">
                     <h1 class="ion-text-uppercase">Inicia sesió</h1>
-                    <div class="form-group mb-3">
-                        <label for="email">Email : </label>
-                        <input type="email" formControlName="email" id="email" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="password">Contrasenya : </label>
-                        <input type="password" formControlName="password" id="password" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <input type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mb-2 w-100"
-                            value="Iniciar sesió">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-light w-100 d-flex align-items-center justify-content-center"
-                            (click)="signInGoogle()"><img src="/assets/img/google.png" width="20" height="20" alt="google"
-                                style="margin-right: 5px;"><span>Google</span></button>
-                    </div>
+                    <ion-list>
+                        <ion-item>
+                            <ion-input formControlName="email" labelPlacement="floating">
+                                <div slot="label">Email <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input formControlName="password" labelPlacement="floating" type="password">
+                                <div slot="label">Contrasenya <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button type="submit" [disabled]="!formGroup.valid">Iniciar sesió</ion-button>
+                    <ion-button (click)="signInGoogle()" color="light"><img src="/assets/img/google.png" width="20" height="20" alt="google"
+                                style="margin-right: 5px; ">Google</ion-button>
                     <p class="text-center mt-3">
                         o <strong [routerLink]="['/signUp']" style="cursor: pointer;">Crea el teu compte</strong>
                     </p>
                 </form>
-        
             </ion-col>
         </ion-row>
     </ion-grid>
-    
 </ion-content>
+
+
