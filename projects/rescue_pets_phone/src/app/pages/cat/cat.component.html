@@ -3,8 +3,8 @@
         <ion-row>
             <ion-col size="3" *ngFor="let pet of getAnimal(); index as i">
                 <div *ngIf="pet.type == 'cat'">
-                    <img src="{{pet.main_image}}" routerLink="/animal/{{pet.id}}" class="w-100" alt="img{{pet.name}}" height="150" style="object-fit: cover;">
-                    <h5 class="text-center mt-2">{{pet.name}}</h5>
+                    <img src="{{pet.main_image}}" routerLink="/animal/{{pet.id}}" alt="img{{pet.name}}" height="150" style="object-fit: cover;">
+                    <h5>{{pet.name}}</h5>
                     <div class="row" *ngIf="isUserLogged">
                         <ion-button color="primary" routerLink="/timetable/{{pet.id}}">Cuidar</ion-button>
                         <ion-button color="primary" (click)="delete(i, pet.id!)" *ngIf="isAdmin">Eliminar</ion-button>

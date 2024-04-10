@@ -4,59 +4,64 @@
             <div style="padding: 20px;">
                 <h1>{{!modify ? "Afegeix" : "Modifica"}} animals</h1>
                 <form [formGroup]="formGroup" (ngSubmit)="addPet(formGroup.value)">
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" formControlName="name" placeholder="Introdueix el nom" style="width: 100%;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label for="type">Tipus</label>
-                        <select style="width: 100%;" id="type" formControlName="type">
-                            <option value="dog">Gos</option>
-                            <option value="cat">Gat</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label for="main-file">Foto principal</label>
-                        <input type="file" (change)="readMainFile($event)" accept="image/*" id="main-file" style="width: 100%;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label for="files">Fotos carousel</label>
-                        <input type="file" (change)="readCarouselFiles($event)"  multiple="multiple" accept="image/*" id="files" style="width: 100%;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" formControlName="biography" placeholder="Biografia" style="width: 100%;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <select style="width: 100%;" formControlName="sex">
-                            <option selected>Sexe</option>
-                            <option value="male">Mascle</option>
-                            <option value="female">Femella</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="date" formControlName="birthdate" placeholder="Data de naixament" style="width: 100%;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label for="Chip">Chip</label>
-                        <select style="width: 100%;" id="chip" formControlName="chip">
-                            <option value="yes">Si</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" style="width: 100%;" formControlName="vaccines" placeholder="Vacunes separat per comes">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" style="width: 100%;" formControlName="diseases" placeholder="Malalties separat per comes">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" style="width: 100%;" formControlName="observations" placeholder="Observacions separat per comes">
-                    </div>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Nom: <ion-text color="danger">(Required)</ion-text></ion-label>
+                        <ion-input formControlName="name"></ion-input>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Tipus</ion-label>
+                        <ion-select formControlName="type" placeholder="Selecciona un tipus">
+                            <ion-select-option value="dog">Gos</ion-select-option>
+                            <ion-select-option value="cat">Gat</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Foto principal</ion-label>
+                        <input type="file" (change)="readMainFile($event)" accept="image/*" id="main-file">
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Fotos carousel</ion-label>
+                        <input type="file" (change)="readCarouselFiles($event)" multiple="multiple" accept="image/*" id="files">
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Biografia</ion-label>
+                        <ion-input formControlName="biography"></ion-input>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Sexe</ion-label>
+                        <ion-select formControlName="sex" placeholder="Selecciona el sexe">
+                            <ion-select-option value="male">Mascle</ion-select-option>
+                            <ion-select-option value="female">Femella</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Data de naixament</ion-label>
+                        <ion-input type="date" formControlName="birthdate"></ion-input>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Chip</ion-label>
+                        <ion-select formControlName="chip" placeholder="Té xip?">
+                            <ion-select-option value="yes">Si</ion-select-option>
+                            <ion-select-option value="no">No</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Vacunes separat per comes</ion-label>
+                        <ion-input formControlName="vaccines"></ion-input>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Malalties separat per comes</ion-label>
+                        <ion-input formControlName="diseases"></ion-input>
+                    </ion-item>
+                    <ion-item style="margin-bottom: 20px;">
+                        <ion-label position="floating">Observacions separat per comes</ion-label>
+                        <ion-input formControlName="observations"></ion-input>
+                    </ion-item>
                     <div>
-                        <input type="submit" [disabled]="!formGroup.valid" value="{{modify ? 'Modificar' : 'Afegir'}}">
+                        <ion-button type="submit" [disabled]="!formGroup.valid">{{modify ? 'Modificar' : 'Afegir'}}</ion-button>
                     </div>
                 </form>
             </div>
-            
         </ion-col>
     </ion-row>
 </ion-grid>

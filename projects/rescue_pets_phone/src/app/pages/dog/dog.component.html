@@ -3,7 +3,7 @@
         <ion-row>
             <ion-col size="3" *ngFor="let pet of getPets(); index as i"> 
                 <div *ngIf="pet.type == 'dog'">
-                    <img src="{{pet.main_image}}" class="w-100" alt="img{{pet.name}}" routerLink="/animal/{{pet.id}}" height="150" style="object-fit: cover;">
+                    <img src="{{pet.main_image}}" alt="img{{pet.name}}" routerLink="/animal/{{pet.id}}" height="150" style="object-fit: cover;">
                     <h5 class="text-center mt-2">{{pet.name}}</h5>
                     <div class="row" *ngIf="isUserLogged">
                         <ion-button color="primary" routerLink="/timetable/{{pet.id}}">Cuidar</ion-button>

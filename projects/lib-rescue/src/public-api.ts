@@ -4,7 +4,6 @@
 
 export * from './lib/guards/admin-guard';
 export * from './lib/guards/auth-guard.guard';
-export * from './lib/guards/emailVerified';
 
 export * from './lib/models/pet.model';
 export * from './lib/models/user.model';
