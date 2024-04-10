@@ -1,31 +1,35 @@
-<ion-grid>
-    <ion-row class="ion-justify-content-center">
-        <ion-col size="10">
-            <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)">
-                <h1>Crea el teu compte</h1>
-                <div class="form-group mb-3">
-                    <label for="name">Nom : </label>
-                    <input formControlName="name" type="text" id="name" class="form-control">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="surnames">Cognoms : </label>
-                    <input formControlName="surnames" type="text" id="surnames" class="form-control">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="email">Email : </label>
-                    <input formControlName="email" type="email" id="email" class="form-control">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="password">Contrasenya : </label>
-                    <input formControlName="password" type="password" id="password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="submit" [disabled]="!formGroup.valid" class="btn btn-dark mb-2 w-100" value="Crear compte">
-                </div>
-                <div class="form-group">
-                    <input type="button" class="btn btn-outline-dark w-100" value="Iniciar sesió" [routerLink]="['/signIn']">
-                </div>
-            </form>
-        </ion-col>
-    </ion-row>
-</ion-grid>
+<ion-content>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="10">
+                <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)">
+                    <h1>Crea el teu compte</h1>
+                    <ion-list>
+                        <ion-item>
+                            <ion-input formControlName="name" labelPlacement="floating">
+                                <div slot="label">Nom: <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input formControlName="surnames" labelPlacement="floating" type="text">
+                                <div slot="label">Cognoms: <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input formControlName="email" labelPlacement="floating" type="email">
+                                <div slot="label">Email: <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input formControlName="password" labelPlacement="floating" type="password">
+                                <div slot="label">Contrasenya: <ion-text color="danger">(Required)</ion-text></div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button type="submit" [disabled]="!formGroup.valid">Crear compte</ion-button>
+                    <ion-button routerLink="/signIn" color="light">Iniciar sesió</ion-button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
