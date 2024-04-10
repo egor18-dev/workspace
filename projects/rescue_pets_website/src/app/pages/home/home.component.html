@@ -4,8 +4,8 @@
             <img src="/assets/img/img1.jpg" class="w-100 h-100 rounded" alt="img1" style="object-fit: cover;">
         </div>
         <div class="col-lg-6">
-            <h2>Titul</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero perferendis repellat at beatae, modi dolore. Et veritatis cumque dignissimos, ex maiores, distinctio minus perspiciatis omnis, architecto officiis aliquam quam dolor? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit perferendis cumque, illo at cupiditate amet doloribus a harum nobis! Natus impedit eveniet, illo ut ea consequuntur expedita tenetur perspiciatis dolor?</p>
+            <h2>{{getData().nom_empresa}}</h2>
+            <p>{{getData().historia}}</p>
             <h2>Localització</h2>
             <div class="container-fluid">
                 <div class="row">
@@ -14,18 +14,20 @@
                     </div>
                     <div class="col-lg-6">
                         <h3>Adreça</h3>
-                       <ul>
-                        <li>Direccio : Prova</li>
-                        <li>Direccio : Prova</li>
-                        <li>Direccio : Prova</li>
-                        <li>Direccio : Prova</li>
-                       </ul>
-                       <h3>Contacte</h3>
-                       <ul>
-                        <li>Contacte : Prova</li>
-                        <li>Contacte : Prova</li>
-                        <li>Contacte : Prova</li>
-                       </ul>
+                        <ul>
+                            <li>{{getData().direccio.carrer}}</li>
+                            <li>{{getData().direccio.ciutat}}</li>
+                            <li>{{getData().direccio.cp}}</li>
+                            <li>{{getData().direccio.estat}}</li>
+                            <li>{{getData().direccio.numero}}</li>
+                            <li>{{getData().direccio.pais}}</li>
+                        </ul>
+                        <h3>Contacte</h3>
+                        <ul>
+                            <li>{{getData().contacte.nom}}</li>
+                            <li>{{getData().contacte.correu}}</li>
+                            <li>{{getData().contacte.telefon}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>

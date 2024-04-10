@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthSessionService } from 'libRescue';
+import { AuthSessionService, InfoService } from 'libRescue';
 import { RescueService } from 'libRescue';
 import { Router } from '@angular/router';
 
@@ -11,9 +11,16 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit{
 
 
-  constructor () {}
+  constructor (private _infoService : InfoService) {}
 
   ngOnInit(): void {
+
+  }
+
+
+  getData ()
+  {
+    return this._infoService.getData();
   }
 
 
